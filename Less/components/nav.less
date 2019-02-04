@@ -8,7 +8,8 @@ nav{
     align-content: center;
 
     ul{
-        display: none;
+        display: flex;
+        opacity: 0;
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -16,9 +17,11 @@ nav{
         justify-content: center;
         align-items: center;
         background-color: @light;
+        transition-duration: 1s;
+        transition-property: opacity;
     }
     
     .active{  
-        display: flex;
+        opacity: 1;
     }
 }
