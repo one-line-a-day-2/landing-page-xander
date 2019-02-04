@@ -8,25 +8,73 @@
   z-index: 10;
 }
 nav {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-content: center;
+  width: 100%;
 }
 nav ul {
   display: flex;
   opacity: 0;
+  z-index: -1;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #F8F9FA;
   transition-duration: 1s;
-  transition-property: opacity;
+  transition-property: all;
 }
 nav .active {
   opacity: 1;
+  height: 100vh;
+}
+.header {
+  height: fit-content;
+  width: 100%;
+  padding: 58px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(0, 217, 192, 0) 0%, rgba(0, 217, 192, 0.69261208) 29%, #00d9c0 79%, #fcfdaf 100%), url('../../images/warren-wong.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, 48% 86%;
+}
+.header .iphone {
+  margin-top: 50px;
+}
+.header .first-cta-container {
+  height: 100vh;
+  justify-content: center;
+}
+.header .cta-1 {
+  margin: 50px auto;
+}
+.header .cta-1 .signup-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: #030301;
+  background: none;
+}
+.header .cta-1 .signup-button:hover {
+  border-color: white;
+}
+.header .cta-1 .login-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: white;
+  background: #030301;
+}
+.header .cta-1 .login-button:hover {
+  border-color: white;
 }
 a {
   text-decoration: none;
@@ -40,4 +88,8 @@ body {
   min-width: 300px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
 }
