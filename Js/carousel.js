@@ -1,8 +1,8 @@
 class Carousel {
     constructor(carouselElement){
         this.carouselElement = carouselElement
-        this.imgs = carouselElement.querySelectorAll('.comment-card')
-        this.currentImg = 0
+        this.cards = carouselElement.querySelectorAll('.comment-card')
+        this.currentCard = 0
         this.rightBtn = carouselElement.querySelector('.right-button')
         this.leftBtn = carouselElement.querySelector('.left-button')
 
@@ -14,23 +14,21 @@ class Carousel {
      */
     buttonClick(direction){
         
-        let prevImg = this.currentImg
-        let nextImg = this.currentImg + direction
-        if(nextImg < 0){
-            this.currentImg = this.imgs.length - 1
-        }else if( nextImg > this.imgs.length - 1){
-            this.currentImg = 0
+        let prevCard = this.currentCard
+        let nextCard = this.currentCard + direction
+        if(nextCard < 0){
+            this.currentCard = this.cards.length - 1
+        }else if( nextCard > this.cards.length - 1){
+            this.currentCard = 0
         }else{
-            this.currentImg = nextImg
+            this.currentCard = nextCard
         }
-        console.log(prevImg,this.currentImg)
-        this.changeImg(prevImg, this.currentImg)
+        this.changeCard(prevCard, this.currentCard)
     }
 
-    changeImg(prevImg, nextImg){
-        console.log(this.imgs[prevImg].classList)
-        this.imgs[prevImg].classList.toggle('active')
-        this.imgs[nextImg].classList.toggle('active')
+    changeCard(prevCard, nextCard){
+        this.cards[prevCard].classList.toggle('active')
+        this.cards[nextCard].classList.toggle('active')
     }
 }
 
