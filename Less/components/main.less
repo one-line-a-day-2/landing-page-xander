@@ -7,8 +7,10 @@
     flex-direction: column;
     align-items: center;
 
-    // background: url('../../images/warren-wong.jpg') 56% -568px no-repeat;
-    // background-position: 56% -568px;
+    h1{
+        margin-bottom: 30px;
+    }
+    
     background-image: linear-gradient(180deg, rgba(0, 217, 192, 0) 0%, rgba(0, 217, 192, 0.69261208) 29%, #00d9c0 79%, #fcfdaf 100%), url('../../images/warren-wong.jpg');
     background-repeat: no-repeat, no-repeat;
     background-position: center center, 49% 77%;
@@ -21,9 +23,10 @@
     .first-cta-container{
         height: 70vh;
         justify-content: center;
+        padding: 0 10px;
 
         @media @phone{
-            width: 700px;
+            width: 500px;
         }
     }
 
@@ -55,8 +58,8 @@
         border: none;
         position: absolute;
 
-        &:active{
-            
+        &:focus{
+            outline:none;
         }
     }
 
@@ -119,25 +122,28 @@
 
 footer{
     min-height: 500px;
-    align-items: center;
     padding-top: @nav-height-mobile;
     background-image: linear-gradient(180deg, rgba(252,253,175,1) 0%, rgba(0,217,192,1) 100%);
+    text-align: center;
 
-    h2{
-        margin-top: 5px;
+    .more{
+        align-items: center;
     }
 
-    ul{
-        text-align: center;
+    h2{
+        margin-top: 30px;
     }
 
     li{
         margin: 3px 0;
     }
+    
+
     .cta-2{
         margin: 50px auto;
         display: flex;
         flex-direction: column;
+
         .signup-button{
             .app-button(@rich-black, none);
         }
@@ -169,12 +175,13 @@ footer{
     }
 
     @media @phone{
-        padding-top: 300px;
+        padding-top: 200px;
 
         .more{
             display: flex;
             width: 100%;
             text-align: center;
+            align-items: flex-start;
             justify-content: space-evenly;
         }
     }

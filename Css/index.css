@@ -14,15 +14,15 @@ nav {
   justify-content: space-between;
   align-content: center;
   width: 100%;
+  height: 58px;
 }
 nav .logo {
-  height: 58px;
+  height: 100%;
   padding: 10px;
 }
 @media (min-width: 500px) {
   nav .logo {
-    height: 80px;
-    padding-left: 30px;
+    padding: 10px;
   }
 }
 nav ul {
@@ -43,13 +43,13 @@ nav ul {
     opacity: 1;
     flex-direction: row;
     z-index: 10;
-    height: 80px;
-    width: 500px;
+    height: 100%;
+    width: 300px;
     align-items: center;
     background: none;
     min-width: fit-content;
     position: unset;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   nav ul li {
     margin-bottom: 0;
@@ -61,7 +61,10 @@ nav .active {
 }
 @media (min-width: 500px) {
   nav {
-    height: 80px;
+    height: 60px;
+    background: white;
+    z-index: 12;
+    padding: 0 10%;
   }
   nav .hamburger {
     display: none;
@@ -78,16 +81,20 @@ nav .active {
   background-repeat: no-repeat, no-repeat;
   background-position: center center, 49% 77%;
 }
+.header h1 {
+  margin-bottom: 30px;
+}
 .header .iphone {
   margin-top: 50px;
 }
 .header .first-cta-container {
   height: 70vh;
   justify-content: center;
+  padding: 0 10px;
 }
 @media (min-width: 500px) {
   .header .first-cta-container {
-    width: 700px;
+    width: 500px;
   }
 }
 .header .cta-1 {
@@ -123,7 +130,7 @@ nav .active {
 }
 @media (min-width: 500px) {
   .header {
-    padding: 80px 10px;
+    padding: 60px 10px;
     flex-direction: row;
     justify-content: space-evenly;
     min-height: 100vh;
@@ -138,6 +145,9 @@ nav .active {
   background: none;
   border: none;
   position: absolute;
+}
+.user-comments button:focus {
+  outline: none;
 }
 .user-comments .left-button {
   top: 50%;
@@ -193,15 +203,15 @@ nav .active {
 }
 footer {
   min-height: 500px;
-  align-items: center;
   padding-top: 58px;
   background-image: linear-gradient(180deg, #fcfdaf 0%, #00d9c0 100%);
+  text-align: center;
+}
+footer .more {
+  align-items: center;
 }
 footer h2 {
-  margin-top: 5px;
-}
-footer ul {
-  text-align: center;
+  margin-top: 30px;
 }
 footer li {
   margin: 3px 0;
@@ -264,12 +274,13 @@ footer .formalities {
 }
 @media (min-width: 500px) {
   footer {
-    padding-top: 300px;
+    padding-top: 200px;
   }
   footer .more {
     display: flex;
     width: 100%;
     text-align: center;
+    align-items: flex-start;
     justify-content: space-evenly;
   }
 }
@@ -279,6 +290,9 @@ a {
 li {
   list-style: none;
   margin-bottom: 30px;
+}
+button:hover {
+  cursor: pointer;
 }
 body {
   box-sizing: border-box;

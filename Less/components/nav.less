@@ -9,14 +9,14 @@ nav{
     justify-content: space-between;
     align-content: center;
     width: 100%;
+    height: @nav-height-mobile;
 
     .logo{
-        height: @nav-height-mobile;
+        height: 100%;
         padding: 10px;
 
         @media @phone {
-            height: @nav-height-desktop;
-            padding-left: 30px;
+            padding: 10px;
         }
     }
 
@@ -37,13 +37,15 @@ nav{
             opacity: 1;
             flex-direction: row;
             z-index: 10;
-            height: 80px;
-            width: 500px;
+            height: 100%;
+            width: 300px;
             align-items: center;
             background: none;
             min-width: fit-content;
             position: unset;
-            justify-content: space-evenly;
+            justify-content: space-between;
+
+            
 
             li{
                 margin-bottom: 0;
@@ -58,8 +60,12 @@ nav{
 
     @media @phone {
         height: @nav-height-desktop;
+        background: white;
+        z-index: 12;
+        padding: 0 10%;
         .hamburger{
             display: none;
         }
+
     }
 }
