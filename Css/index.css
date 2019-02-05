@@ -181,15 +181,11 @@ nav .active {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .user-comments .carousel .comment-card h2 {
   font-size: 2rem;
   font-weight: 100;
-  text-align: center;
-  display: none;
-}
-.user-comments .carousel .comment-card h3 {
-  text-align: right;
   display: none;
 }
 .user-comments .carousel .active {
