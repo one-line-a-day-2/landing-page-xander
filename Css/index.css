@@ -15,10 +15,13 @@ nav {
   align-content: center;
   width: 100%;
 }
+nav .logo {
+  height: 58px;
+  padding: 10px;
+}
 nav ul {
   display: flex;
   opacity: 0;
-  z-index: -1;
   position: absolute;
   width: 100vw;
   height: 0;
@@ -85,6 +88,7 @@ nav .active {
 .user-comments {
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 .user-comments button {
   background: none;
@@ -93,6 +97,7 @@ nav .active {
 }
 .user-comments .left-button {
   top: 50%;
+  left: 0;
 }
 .user-comments .right-button {
   top: 50%;
