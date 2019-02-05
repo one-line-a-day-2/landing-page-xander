@@ -1,0 +1,32 @@
+.hamburger{
+    z-index: 10;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+
+    ul{
+        display: flex;
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+        width: 100vw;
+        height: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: @light;
+        transition-duration: 1s;
+        transition-property: all;
+    }
+    
+    .active{  
+        opacity: 1;
+        height: 100vh;
+    }
+}

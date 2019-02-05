@@ -1,0 +1,138 @@
+.header{
+    height: fit-content;
+    width: 100%;
+    padding: @nav-height-mobile 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // background: url('../../images/warren-wong.jpg') 56% -568px no-repeat;
+    // background-position: 56% -568px;
+    background-image: linear-gradient(180deg, rgba(0, 217, 192, 0) 0%, rgba(0, 217, 192, 0.69261208) 29%, #00d9c0 79%, #fcfdaf 100%), url('../../images/warren-wong.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, 49% 77%;
+
+
+    .iphone{
+        margin-top: 50px;
+    }
+
+    .first-cta-container{
+        height: 70vh;
+        justify-content: center;
+    }
+
+    .cta-1{
+        margin: 50px auto;
+
+        .signup-button{
+            .app-button(@rich-black, none);
+        }
+        .login-button{
+            .app-button(white,@rich-black);
+        }
+    }
+}
+
+.user-comments{
+    align-items: center;
+    position: relative;
+    
+    
+    button{
+        background: none;
+        border: none;
+        position: absolute;
+
+        &:active{
+            
+        }
+    }
+
+    .left-button{
+        top: 50%;
+    }
+
+    .right-button{
+        top: 50%;
+        right: 0;
+    }
+    
+    .carousel{
+        display: flex;
+        
+        .comment-card{
+            width: 0;
+            height: 300px;
+            display: block;
+            opacity: 0;
+            transition-duration: 1s;
+            transition-property: all;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                font-size: 2rem;
+                font-weight: 100;
+                text-align: center;
+                display: none;
+            }
+            h3{
+                text-align: right;
+                display: none;
+            }
+
+        }
+
+        .active{
+            opacity: 1;
+            width: 70%;
+            margin: auto;
+            h2, h3{
+                display: inline;
+            }
+        }
+    }
+
+}
+
+footer{
+    min-height: 500px;
+    align-items: center;
+    padding-top: @nav-height-mobile;
+    background-image: linear-gradient(180deg, rgba(252,253,175,1) 0%, rgba(0,217,192,1) 100%);
+
+    h2{
+        margin-top: 5px;
+    }
+
+    ul{
+        text-align: center;
+    }
+
+    li{
+        margin: 3px 0;
+    }
+    .cta-2{
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        .signup-button{
+            .app-button(@rich-black, none);
+        }
+        .login-button{
+            .app-button(white,@rich-black);
+        }
+
+        button{
+            margin: 10px 0;
+        }
+    }
+    .formalities{
+        margin: 20px 0;
+        text-align: center;
+    }
+}

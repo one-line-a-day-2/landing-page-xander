@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+.hamburger {
+  z-index: 10;
+}
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F9FA;
+  transition-duration: 1s;
+  transition-property: all;
+}
+nav .active {
+  opacity: 1;
+  height: 100vh;
+}
+.header {
+  height: fit-content;
+  width: 100%;
+  padding: 58px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(0, 217, 192, 0) 0%, rgba(0, 217, 192, 0.69261208) 29%, #00d9c0 79%, #fcfdaf 100%), url('../../images/warren-wong.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, 49% 77%;
+}
+.header .iphone {
+  margin-top: 50px;
+}
+.header .first-cta-container {
+  height: 70vh;
+  justify-content: center;
+}
+.header .cta-1 {
+  margin: 50px auto;
+}
+.header .cta-1 .signup-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: #030301;
+  background: none;
+}
+.header .cta-1 .signup-button:hover {
+  border-color: white;
+}
+.header .cta-1 .signup-button:active {
+  border-color: #030301;
+}
+.header .cta-1 .login-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: white;
+  background: #030301;
+}
+.header .cta-1 .login-button:hover {
+  border-color: white;
+}
+.header .cta-1 .login-button:active {
+  border-color: #030301;
+}
+.user-comments {
+  align-items: center;
+  position: relative;
+}
+.user-comments button {
+  background: none;
+  border: none;
+  position: absolute;
+}
+.user-comments .left-button {
+  top: 50%;
+}
+.user-comments .right-button {
+  top: 50%;
+  right: 0;
+}
+.user-comments .carousel {
+  display: flex;
+}
+.user-comments .carousel .comment-card {
+  width: 0;
+  height: 300px;
+  display: block;
+  opacity: 0;
+  transition-duration: 1s;
+  transition-property: all;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-comments .carousel .comment-card h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  display: none;
+}
+.user-comments .carousel .comment-card h3 {
+  text-align: right;
+  display: none;
+}
+.user-comments .carousel .active {
+  opacity: 1;
+  width: 70%;
+  margin: auto;
+}
+.user-comments .carousel .active h2,
+.user-comments .carousel .active h3 {
+  display: inline;
+}
+footer {
+  min-height: 500px;
+  align-items: center;
+  padding-top: 58px;
+  background-image: linear-gradient(180deg, #fcfdaf 0%, #00d9c0 100%);
+}
+footer h2 {
+  margin-top: 5px;
+}
+footer ul {
+  text-align: center;
+}
+footer li {
+  margin: 3px 0;
+}
+footer .cta-2 {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+footer .cta-2 .signup-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: #030301;
+  background: none;
+}
+footer .cta-2 .signup-button:hover {
+  border-color: white;
+}
+footer .cta-2 .signup-button:active {
+  border-color: #030301;
+}
+footer .cta-2 .login-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: white;
+  background: #030301;
+}
+footer .cta-2 .login-button:hover {
+  border-color: white;
+}
+footer .cta-2 .login-button:active {
+  border-color: #030301;
+}
+footer .cta-2 button {
+  margin: 10px 0;
+}
+footer .formalities {
+  margin: 20px 0;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+body {
+  box-sizing: border-box;
+  min-width: 300px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
