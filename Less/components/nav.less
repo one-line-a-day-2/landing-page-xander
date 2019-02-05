@@ -13,6 +13,11 @@ nav{
     .logo{
         height: @nav-height-mobile;
         padding: 10px;
+
+        @media @phone {
+            height: @nav-height-desktop;
+            padding-left: 30px;
+        }
     }
 
     ul{
@@ -27,10 +32,34 @@ nav{
         background-color: @light;
         transition-duration: 1s;
         transition-property: all;
+
+        @media @phone {
+            opacity: 1;
+            flex-direction: row;
+            z-index: 10;
+            height: 80px;
+            width: 500px;
+            align-items: center;
+            background: none;
+            min-width: fit-content;
+            position: unset;
+            justify-content: space-evenly;
+
+            li{
+                margin-bottom: 0;
+            }
+        }
     }
     
     .active{  
         opacity: 1;
         height: 100vh;
+    }
+
+    @media @phone {
+        height: @nav-height-desktop;
+        .hamburger{
+            display: none;
+        }
     }
 }

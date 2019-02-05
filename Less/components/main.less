@@ -21,6 +21,10 @@
     .first-cta-container{
         height: 70vh;
         justify-content: center;
+
+        @media @phone{
+            width: 700px;
+        }
     }
 
     .cta-1{
@@ -32,6 +36,13 @@
         .login-button{
             .app-button(white,@rich-black);
         }
+    }
+
+    @media @phone{
+        padding: @nav-height-desktop 10px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        min-height: 100vh;
     }
 }
 
@@ -52,11 +63,18 @@
     .left-button{
         top: 50%;
         left: 0;
+
+        @media @phone {
+            left: 20%;
+        }
     }
 
     .right-button{
         top: 50%;
         right: 0;
+        @media @phone {
+            right: 20%;
+        }
     }
     
     .carousel{
@@ -130,9 +148,34 @@ footer{
         button{
             margin: 10px 0;
         }
+
+        @media @phone {
+            margin: 30px auto;
+        }
     }
     .formalities{
         margin: 20px 0;
         text-align: center;
+
+        @media @phone{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            li{
+                display: inline;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    @media @phone{
+        padding-top: 300px;
+
+        .more{
+            display: flex;
+            width: 100%;
+            text-align: center;
+            justify-content: space-evenly;
+        }
     }
 }
