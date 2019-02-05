@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: black;
+  color: inherit;
 }
 .hamburger {
   z-index: 10;
@@ -65,6 +65,9 @@ nav .active {
 .header .cta-1 .signup-button:hover {
   border-color: white;
 }
+.header .cta-1 .signup-button:active {
+  border-color: #030301;
+}
 .header .cta-1 .login-button {
   width: 100px;
   height: 50px;
@@ -75,6 +78,76 @@ nav .active {
 }
 .header .cta-1 .login-button:hover {
   border-color: white;
+}
+.header .cta-1 .login-button:active {
+  border-color: #030301;
+}
+.user-comments {
+  align-items: center;
+}
+.user-comments .carousel h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.user-comments .carousel .comment-card {
+  width: 70%;
+  height: fit-content;
+  margin: 50px auto;
+}
+footer {
+  min-height: 500px;
+  align-items: center;
+  padding-top: 58px;
+  background-image: linear-gradient(180deg, #fcfdaf 0%, #00d9c0 100%);
+}
+footer h2 {
+  margin-top: 5px;
+}
+footer ul {
+  text-align: center;
+}
+footer li {
+  margin: 3px 0;
+}
+footer .cta-2 {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+footer .cta-2 .signup-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: #030301;
+  background: none;
+}
+footer .cta-2 .signup-button:hover {
+  border-color: white;
+}
+footer .cta-2 .signup-button:active {
+  border-color: #030301;
+}
+footer .cta-2 .login-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #030301;
+  border-radius: 100px;
+  color: white;
+  background: #030301;
+}
+footer .cta-2 .login-button:hover {
+  border-color: white;
+}
+footer .cta-2 .login-button:active {
+  border-color: #030301;
+}
+footer .cta-2 button {
+  margin: 10px 0;
+}
+footer .formalities {
+  margin: 20px 0;
+  text-align: center;
 }
 a {
   text-decoration: none;

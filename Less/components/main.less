@@ -34,3 +34,60 @@
         }
     }
 }
+
+.user-comments{
+    align-items: center;
+    
+    .carousel{
+        h2{
+            font-size: 2rem;
+            font-weight: 100;
+        }
+        .comment-card{
+            width: 70%;
+            height: fit-content;
+            margin: 50px auto;
+
+            // background: red;
+        }
+    }
+
+}
+
+footer{
+    min-height: 500px;
+    align-items: center;
+    padding-top: @nav-height-mobile;
+    background-image: linear-gradient(180deg, rgba(252,253,175,1) 0%, rgba(0,217,192,1) 100%);
+
+    h2{
+        margin-top: 5px;
+    }
+
+    ul{
+        text-align: center;
+    }
+
+    li{
+        margin: 3px 0;
+    }
+    .cta-2{
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        .signup-button{
+            .app-button(@rich-black, none);
+        }
+        .login-button{
+            .app-button(white,@rich-black);
+        }
+
+        button{
+            margin: 10px 0;
+        }
+    }
+    .formalities{
+        margin: 20px 0;
+        text-align: center;
+    }
+}

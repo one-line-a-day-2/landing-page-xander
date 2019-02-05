@@ -10,6 +10,7 @@
 </head>
 <body>
     <script src="./Js/index.js" async></script>
+    <script src="./Js/carousel.js" async></script>
     <nav>
         <img src="#" alt="Logo">
         <button class="hamburger hamburger--collapse" type="button">
@@ -30,11 +31,54 @@
                 Some Catchy phrase to invite users yaknow
             </h1>
             <div class="cta-1">
-                <button class="signup-button">Sign Up</button>
-                <button class="login-button">Login</button>
+                <a href="#"><button class="signup-button">Sign Up</button></a>
+                <a href="#"><button class="login-button">Login</button></a>
             </div>
         </div>
     </header>
-    
+    <section class="flex-container user-comments">
+        <div class="carousel">
+            <div class="left-button"></div>
+            <div class="comment-card active">
+                <h2 class="quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</h2>
+                <div class="profile-wrapper">
+                    <div class=prof-pic></div>
+                    <h3>John Doe</h3>
+                </div>
+            </div>
+            <div class="righ-button"></div>
+        </div>
+    </section>
+    <footer class="flex-container">
+        <h2>Get The App</h2>
+        <div class="cta-2">
+            <a href="#"><button class="signup-button">iOS</button></a>
+            <a href="#"><button class="login-button">Android</button></a>
+        </div>
+        <h2>About Us</h2>
+        <ul>
+            <li>Our Story</li>
+            <li>Blog</li>
+            <li>Github</li>
+        </ul>
+
+        <h2>Help</h2>
+        <ul>
+            <li>Help Center</li>
+            <li>Email Us</li>
+        </ul>
+
+        <div class="formalities">
+            <ul>
+                <li>Copyright © 2019 Team Name, Inc.</li>
+                <li>All rights reserved</li>
+            </ul>
+            <ul>
+                <li>Terms of Service</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+    </footer>
 </body>
 </html>
