@@ -88,17 +88,37 @@ nav .active {
 .header p {
   font-size: 2rem;
 }
-.header .iphone {
-  margin-top: 50px;
+.header .phone-container {
+  position: relative;
+}
+.header .phone-container .iphone {
+  width: 250px;
+}
+.header #typed-strings {
+  display: none;
+}
+.header #typed {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  margin: auto;
+  width: 80%;
+}
+.header #typed::after {
+  content: '|';
+  display: inline;
+  animation: blink 0.7s infinite;
 }
 .header .first-cta-container {
   height: 70vh;
   justify-content: center;
+  margin: 200px 0 0;
   padding: 0 10px;
 }
 @media (min-width: 500px) {
   .header .first-cta-container {
     width: 500px;
+    margin-top: 0;
   }
 }
 .header .cta-1 {

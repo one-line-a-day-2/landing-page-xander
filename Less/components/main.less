@@ -20,17 +20,40 @@
     background-position: center center, 49% 77%;
 
 
-    .iphone{
-        margin-top: 50px;
+    
+
+    .phone-container{
+        position: relative;
+        .iphone{
+            width:250px;
+        }
+    }
+    #typed-strings{
+        display: none;
+    }
+
+    #typed{
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        margin: auto;
+        width: 80%;
+        &::after{
+            content: '|';
+            display: inline;  
+            animation: blink 0.7s infinite;
+          }
     }
 
     .first-cta-container{
         height: 70vh;
         justify-content: center;
+        margin: 200px 0 0;
         padding: 0 10px;
 
         @media @phone{
             width: 500px;
+            margin-top: 0;
         }
     }
 

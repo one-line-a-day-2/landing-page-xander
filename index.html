@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./Css/index.css">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="./Js/index.js" async></script>
     <script src="./Js/carousel.js" async></script>
     <nav>
@@ -26,10 +27,19 @@
         </ul>
     </nav>
     <header class="header">
-        <img src="./images/iphone-x.png" alt="iphone X" class="iphone">
+        <div class="phone-container">
+            <img src="./images/iphone-x.png" alt="iphone X" class="iphone">
+            <div id="typed-strings">
+                <p>I feel <strong>great</strong> today!</p>
+                <p>Tomorrow <em>will</em> be better.</p>
+                <p></p>
+            </div>
+            <span id="typed"></span>
+        </div>
+
         <div class="flex-container first-cta-container">
             <h1>
-                Your story matters. Write it one line at a time.
+                Your story is Unique. Write it one line at a time.
             </h1>
             <p>
                 A photo is worth a thousand words, but it can't capture the few that matters. Write your story today.
@@ -114,5 +124,6 @@
         </div>
 
     </footer>
+    <script src="./Js/typing.js"></script>
 </body>
 </html>
