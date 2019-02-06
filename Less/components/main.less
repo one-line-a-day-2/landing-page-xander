@@ -113,7 +113,7 @@
         
         .comment-card{
             width: 0;
-            height: 300px;
+            height: 500px;
             display: block;
             opacity: 0;
             transition-duration: 1s;
@@ -139,10 +139,14 @@
 
         .active{
             opacity: 1;
-            width: 70%;
+            width: 85%;
             margin: auto;
             h2, h3{
                 display: inline;
+            }
+
+            @media @phone {
+                width: 50%;    
             }
         }
     }
