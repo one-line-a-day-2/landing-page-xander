@@ -7,6 +7,9 @@
 .hamburger {
   z-index: 10;
 }
+#hidden-logo {
+  display: none;
+}
 nav {
   position: fixed;
   top: 0;
