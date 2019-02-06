@@ -82,7 +82,11 @@ nav .active {
   background-position: center center, 49% 77%;
 }
 .header h1 {
+  font-size: 3rem;
   margin-bottom: 30px;
+}
+.header p {
+  font-size: 2rem;
 }
 .header .iphone {
   margin-top: 50px;
