@@ -159,7 +159,7 @@ nav .active {
 }
 @media (min-width: 500px) {
   .header {
-    padding: 60px 10px;
+    padding: 60px 10%;
     flex-direction: row;
     justify-content: space-evenly;
     min-height: 100vh;
@@ -312,6 +312,65 @@ footer .formalities {
     text-align: center;
     align-items: flex-start;
     justify-content: space-evenly;
+  }
+}
+#team-container {
+  width: 100%;
+  height: fit-content;
+  margin: 100px 0 0;
+}
+#team-container h1,
+#team-container p {
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (min-width: 500px) {
+  #team-container h1,
+  #team-container p {
+    margin: unset;
+  }
+}
+#team-container .prof-pic {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100px;
+}
+#team-container .prof-pic img {
+  width: 100%;
+}
+#team-container .members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 100px auto;
+}
+#team-container .members-container .member {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#team-container .members-container .member li {
+  margin: 5px 0;
+}
+@media (min-width: 500px) {
+  #team-container .members-container .member {
+    width: 33%;
+  }
+}
+@media (min-width: 500px) {
+  #team-container .members-container {
+    width: 100%;
+  }
+}
+@media (min-width: 500px) {
+  #team-container h1,
+  #team-container p {
+    width: 500px;
   }
 }
 a {
