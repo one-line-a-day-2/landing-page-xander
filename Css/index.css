@@ -198,11 +198,11 @@ nav .active {
 }
 .user-comments .carousel {
   display: flex;
+  width: 100%;
 }
 .user-comments .carousel .comment-card {
   width: 0;
   height: 500px;
-  display: block;
   opacity: 0;
   transition-duration: 1s;
   transition-property: all;
