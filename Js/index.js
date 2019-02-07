@@ -9,10 +9,12 @@ hamburger.addEventListener('click', e => {
 
     navLinks.classList.toggle('active')
     
-    if(userCommentsSection.style.zIndex >= 0){
-        userCommentsSection.style.zIndex = -1;
-    }else{
-        userCommentsSection.style.zIndex = 0;
+    if(userCommentsSection){
+        if(userCommentsSection.style.zIndex >= 0){
+            userCommentsSection.style.zIndex = -1;
+        }else{
+            userCommentsSection.style.zIndex = 0;
+        }
     }
 })
 
