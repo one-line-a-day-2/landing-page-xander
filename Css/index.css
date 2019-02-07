@@ -7,6 +7,9 @@
 .hamburger {
   z-index: 10;
 }
+#hidden-logo {
+  display: none;
+}
 nav {
   position: fixed;
   top: 0;
@@ -14,11 +17,21 @@ nav {
   justify-content: space-between;
   align-content: center;
   width: 100%;
+  height: 58px;
+  z-index: 5;
+}
+nav .logo {
+  height: 100%;
+  padding: 10px;
+}
+@media (min-width: 750px) {
+  nav .logo {
+    padding: 10px;
+  }
 }
 nav ul {
   display: flex;
   opacity: 0;
-  z-index: -1;
   position: absolute;
   width: 100vw;
   height: 0;
@@ -29,9 +42,37 @@ nav ul {
   transition-duration: 1s;
   transition-property: all;
 }
+@media (min-width: 750px) {
+  nav ul {
+    opacity: 1;
+    flex-direction: row;
+    z-index: 10;
+    height: 100%;
+    width: 300px;
+    align-items: center;
+    background: none;
+    min-width: fit-content;
+    position: unset;
+    justify-content: space-between;
+  }
+  nav ul li {
+    margin-bottom: 0;
+  }
+}
 nav .active {
   opacity: 1;
   height: 100vh;
+}
+@media (min-width: 750px) {
+  nav {
+    height: 60px;
+    background: white;
+    z-index: 12;
+    padding: 0 10%;
+  }
+  nav .hamburger {
+    display: none;
+  }
 }
 .header {
   height: fit-content;
@@ -44,12 +85,50 @@ nav .active {
   background-repeat: no-repeat, no-repeat;
   background-position: center center, 49% 77%;
 }
-.header .iphone {
-  margin-top: 50px;
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+@media (min-width: 750px) {
+  .header h1 {
+    margin-top: 60px;
+  }
+}
+.header p {
+  font-size: 2rem;
+}
+.header .phone-container {
+  position: relative;
+  z-index: 3;
+}
+.header .phone-container .iphone {
+  width: 250px;
+}
+.header #typed-strings {
+  display: none;
+}
+.header #typed {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  margin: auto;
+  width: 80%;
+}
+.header #typed::after {
+  content: '|';
+  display: inline;
 }
 .header .first-cta-container {
   height: 70vh;
   justify-content: center;
+  margin: 200px 0 0;
+  padding: 0 10px;
+}
+@media (min-width: 750px) {
+  .header .first-cta-container {
+    width: 500px;
+    margin-top: 0;
+  }
 }
 .header .cta-1 {
   margin: 50px auto;
@@ -82,29 +161,58 @@ nav .active {
 .header .cta-1 .login-button:active {
   border-color: #030301;
 }
+@media (min-width: 750px) {
+  .header {
+    padding: 60px 10%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 100vh;
+  }
+}
 .user-comments {
   align-items: center;
   position: relative;
+  z-index: 1;
+  padding: 20px 0;
+}
+.user-comments #user-count {
+  font-weight: 200;
+  font-size: 3rem;
+  margin: 0 15px;
 }
 .user-comments button {
   background: none;
   border: none;
   position: absolute;
 }
+.user-comments button:focus {
+  outline: none;
+}
 .user-comments .left-button {
   top: 50%;
+  left: 0;
+}
+@media (min-width: 750px) {
+  .user-comments .left-button {
+    left: 20%;
+  }
 }
 .user-comments .right-button {
   top: 50%;
   right: 0;
 }
+@media (min-width: 750px) {
+  .user-comments .right-button {
+    right: 20%;
+  }
+}
 .user-comments .carousel {
   display: flex;
+  width: 100%;
 }
 .user-comments .carousel .comment-card {
   width: 0;
-  height: 300px;
-  display: block;
+  height: 500px;
   opacity: 0;
   transition-duration: 1s;
   transition-property: all;
@@ -112,37 +220,38 @@ nav .active {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .user-comments .carousel .comment-card h2 {
   font-size: 2rem;
   font-weight: 100;
-  text-align: center;
-  display: none;
-}
-.user-comments .carousel .comment-card h3 {
-  text-align: right;
   display: none;
 }
 .user-comments .carousel .active {
   opacity: 1;
-  width: 70%;
+  width: 85%;
   margin: auto;
 }
 .user-comments .carousel .active h2,
 .user-comments .carousel .active h3 {
   display: inline;
 }
+@media (min-width: 750px) {
+  .user-comments .carousel .active {
+    width: 50%;
+  }
+}
 footer {
   min-height: 500px;
-  align-items: center;
   padding-top: 58px;
   background-image: linear-gradient(180deg, #fcfdaf 0%, #00d9c0 100%);
+  text-align: center;
+}
+footer .more {
+  align-items: center;
 }
 footer h2 {
-  margin-top: 5px;
-}
-footer ul {
-  text-align: center;
+  margin-top: 30px;
 }
 footer li {
   margin: 3px 0;
@@ -183,9 +292,96 @@ footer .cta-2 .login-button:active {
 footer .cta-2 button {
   margin: 10px 0;
 }
+@media (min-width: 750px) {
+  footer .cta-2 {
+    margin: 30px auto;
+  }
+}
 footer .formalities {
   margin: 20px 0;
   text-align: center;
+}
+@media (min-width: 750px) {
+  footer .formalities {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  footer .formalities li {
+    display: inline;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 750px) {
+  footer {
+    padding-top: 200px;
+  }
+  footer .more {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}
+#team-container {
+  width: 100%;
+  height: fit-content;
+  margin: 100px 0 0;
+}
+#team-container h1,
+#team-container p {
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (min-width: 750px) {
+  #team-container h1,
+  #team-container p {
+    margin: unset;
+  }
+}
+#team-container .prof-pic {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100px;
+}
+#team-container .prof-pic img {
+  width: 100%;
+}
+#team-container .members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 100px auto;
+}
+#team-container .members-container .member {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#team-container .members-container .member li {
+  margin: 5px 0;
+}
+@media (min-width: 750px) {
+  #team-container .members-container .member {
+    width: 33%;
+  }
+}
+@media (min-width: 750px) {
+  #team-container .members-container {
+    width: 100%;
+  }
+}
+@media (min-width: 750px) {
+  #team-container h1,
+  #team-container p {
+    width: 500px;
+  }
 }
 a {
   text-decoration: none;
@@ -193,6 +389,9 @@ a {
 li {
   list-style: none;
   margin-bottom: 30px;
+}
+button:hover {
+  cursor: pointer;
 }
 body {
   box-sizing: border-box;

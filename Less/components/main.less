@@ -7,20 +7,59 @@
     flex-direction: column;
     align-items: center;
 
-    // background: url('../../images/warren-wong.jpg') 56% -568px no-repeat;
-    // background-position: 56% -568px;
+    h1{
+        font-size: 3rem;
+        margin-bottom: 30px;
+
+        @media @tablet {
+            margin-top: @nav-height-desktop;
+        }
+    }
+    p{
+        font-size: 2rem;
+    }
+    
     background-image: linear-gradient(180deg, rgba(0, 217, 192, 0) 0%, rgba(0, 217, 192, 0.69261208) 29%, #00d9c0 79%, #fcfdaf 100%), url('../../images/warren-wong.jpg');
     background-repeat: no-repeat, no-repeat;
     background-position: center center, 49% 77%;
 
 
-    .iphone{
-        margin-top: 50px;
+    
+
+    .phone-container{
+        position: relative;
+        z-index: 3;
+        .iphone{
+            width:250px;
+        }
+
+    }
+    #typed-strings{
+        display: none;
+    }
+
+    #typed{
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        margin: auto;
+        width: 80%;
+        &::after{
+            content: '|';
+            display: inline;
+          }
     }
 
     .first-cta-container{
         height: 70vh;
         justify-content: center;
+        margin: 200px 0 0;
+        padding: 0 10px;
+
+        @media @tablet{
+            width: 500px;
+            margin-top: 0;
+        }
     }
 
     .cta-1{
@@ -33,39 +72,60 @@
             .app-button(white,@rich-black);
         }
     }
+
+    @media @tablet{
+        padding: @nav-height-desktop 10%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        min-height: 100vh;
+    }
 }
 
 .user-comments{
     align-items: center;
     position: relative;
-    
-    
+    z-index: 1;
+    padding: 20px 0;
+
+    #user-count{
+        font-weight: 200;
+        font-size: 3rem;
+        margin: 0 15px;
+    }
     button{
         background: none;
         border: none;
         position: absolute;
 
-        &:active{
-            
+        &:focus{
+            outline:none;
         }
     }
 
     .left-button{
         top: 50%;
+        left: 0;
+
+        @media @tablet {
+            left: 20%;
+        }
     }
 
     .right-button{
         top: 50%;
         right: 0;
+        @media @tablet {
+            right: 20%;
+        }
     }
     
     .carousel{
         display: flex;
+        width: 100%;    
         
         .comment-card{
             width: 0;
-            height: 300px;
-            display: block;
+            height: 500px;
             opacity: 0;
             transition-duration: 1s;
             transition-property: all;
@@ -74,25 +134,30 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
+
             h2{
                 font-size: 2rem;
                 font-weight: 100;
-                text-align: center;
                 display: none;
             }
-            h3{
-                text-align: right;
-                display: none;
-            }
+            // h3{
+            //     // text-align: center;
+            //     display: none;
+            // }
 
         }
 
         .active{
             opacity: 1;
-            width: 70%;
+            width: 85%;
             margin: auto;
             h2, h3{
                 display: inline;
+            }
+
+            @media @tablet {
+                width: 50%;    
             }
         }
     }
@@ -101,25 +166,28 @@
 
 footer{
     min-height: 500px;
-    align-items: center;
     padding-top: @nav-height-mobile;
     background-image: linear-gradient(180deg, rgba(252,253,175,1) 0%, rgba(0,217,192,1) 100%);
+    text-align: center;
 
-    h2{
-        margin-top: 5px;
+    .more{
+        align-items: center;
     }
 
-    ul{
-        text-align: center;
+    h2{
+        margin-top: 30px;
     }
 
     li{
         margin: 3px 0;
     }
+    
+
     .cta-2{
         margin: 50px auto;
         display: flex;
         flex-direction: column;
+
         .signup-button{
             .app-button(@rich-black, none);
         }
@@ -130,9 +198,35 @@ footer{
         button{
             margin: 10px 0;
         }
+
+        @media @tablet {
+            margin: 30px auto;
+        }
     }
     .formalities{
         margin: 20px 0;
         text-align: center;
+
+        @media @tablet{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            li{
+                display: inline;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    @media @tablet{
+        padding-top: 200px;
+
+        .more{
+            display: flex;
+            width: 100%;
+            text-align: center;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
     }
 }
