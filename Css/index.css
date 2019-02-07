@@ -24,7 +24,7 @@ nav .logo {
   height: 100%;
   padding: 10px;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   nav .logo {
     padding: 10px;
   }
@@ -42,7 +42,7 @@ nav ul {
   transition-duration: 1s;
   transition-property: all;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   nav ul {
     opacity: 1;
     flex-direction: row;
@@ -63,7 +63,7 @@ nav .active {
   opacity: 1;
   height: 100vh;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   nav {
     height: 60px;
     background: white;
@@ -89,6 +89,11 @@ nav .active {
   font-size: 3rem;
   margin-bottom: 30px;
 }
+@media (min-width: 750px) {
+  .header h1 {
+    margin-top: 60px;
+  }
+}
 .header p {
   font-size: 2rem;
 }
@@ -112,7 +117,6 @@ nav .active {
 .header #typed::after {
   content: '|';
   display: inline;
-  animation: blink 0.7s infinite;
 }
 .header .first-cta-container {
   height: 70vh;
@@ -120,7 +124,7 @@ nav .active {
   margin: 200px 0 0;
   padding: 0 10px;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   .header .first-cta-container {
     width: 500px;
     margin-top: 0;
@@ -157,7 +161,7 @@ nav .active {
 .header .cta-1 .login-button:active {
   border-color: #030301;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   .header {
     padding: 60px 10%;
     flex-direction: row;
@@ -169,6 +173,12 @@ nav .active {
   align-items: center;
   position: relative;
   z-index: 1;
+  padding: 20px 0;
+}
+.user-comments #user-count {
+  font-weight: 200;
+  font-size: 3rem;
+  margin: 0 15px;
 }
 .user-comments button {
   background: none;
@@ -182,7 +192,7 @@ nav .active {
   top: 50%;
   left: 0;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   .user-comments .left-button {
     left: 20%;
   }
@@ -191,7 +201,7 @@ nav .active {
   top: 50%;
   right: 0;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   .user-comments .right-button {
     right: 20%;
   }
@@ -226,7 +236,7 @@ nav .active {
 .user-comments .carousel .active h3 {
   display: inline;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   .user-comments .carousel .active {
     width: 50%;
   }
@@ -282,7 +292,7 @@ footer .cta-2 .login-button:active {
 footer .cta-2 button {
   margin: 10px 0;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   footer .cta-2 {
     margin: 30px auto;
   }
@@ -291,7 +301,7 @@ footer .formalities {
   margin: 20px 0;
   text-align: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   footer .formalities {
     display: flex;
     width: 100%;
@@ -302,7 +312,7 @@ footer .formalities {
     margin-left: 10px;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   footer {
     padding-top: 200px;
   }
@@ -324,7 +334,7 @@ footer .formalities {
   width: fit-content;
   margin: 0 auto;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   #team-container h1,
   #team-container p {
     margin: unset;
@@ -357,17 +367,17 @@ footer .formalities {
 #team-container .members-container .member li {
   margin: 5px 0;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   #team-container .members-container .member {
     width: 33%;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   #team-container .members-container {
     width: 100%;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   #team-container h1,
   #team-container p {
     width: 500px;
