@@ -432,6 +432,9 @@ li {
 button:hover {
   cursor: pointer;
 }
+button:focus {
+  outline: none;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
