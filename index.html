@@ -32,6 +32,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="./Js/index.js" async></script>
     <script src="./Js/carousel.js" async></script>
+    <script src="./Js/userCount.js" async></script>
     <nav>
         <a href="/"><img src="./svgs/logo.svg" alt="Logo" class="logo"></a>
         <img src="./images/logo-with-bg.png" alt="Logo for preview" id = "hidden-logo">
@@ -41,9 +42,17 @@
             </span>
         </button>
         <ul class="nav-links">
-            <li><a href="https://itunes.apple.com/us/app/">Get the App</a></li>
+            <li><a href="https://www.apple.com/ios/app-store/">Get the App</a></li>
             <li><a href="https://twitter.com/onelineadayhq">Help</a></li>
-            <li><a href="">Login</a></li>
+            <div class="login-container">
+                <li class ="loginButton">Login</li>
+                <ul class="client-container">
+                    <h3>Choose App Client</h3>
+                    <li><a href="https://onelineaday2.netlify.com/">Sheila</a></li>
+                    <li><a href="https://one-line-a-day-2.netlify.com/">Cynthia</a></li>
+                    <li><a href="https://oneline-a-day-app.netlify.com/" id="xanderjakeq">xanderjakeq</a></li>
+                </ul>
+            </div>
         </ul>
     </nav>
     <header class="header">
@@ -65,8 +74,8 @@
                 A photo is worth a thousand words, but it can't capture the few that matters most. Write your story today.
             </p>
             <div class="cta-1">
-                <a href="#"><button class="signup-button" aria-label="Sign Up">Sign Up</button></a>
-                <a href="#"><button class="login-button" aria-label="Login">Login</button></a>
+                <button class="signup-button loginButton" aria-label="Sign Up" >Sign Up</button>
+                <button class="login-button loginButton" aria-label="Login" >Login</button>
             </div>
         </div>
     </header>

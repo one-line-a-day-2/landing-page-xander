@@ -6,6 +6,10 @@
     display: none;
 }
 
+#xanderjakeq{
+    opacity: .2;
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -57,10 +61,55 @@ nav{
         }
     }
     
+    
+    
+    
     .active{  
         opacity: 1;
         height: 100vh;
+
+        @media @tablet {
+            height: @nav-height-desktop;
+        }
     }
+
+    .login-container{
+        position: relative;
+    }
+
+    .loginButton{
+        cursor: pointer;
+    }
+
+    .client-container{
+        position: absolute;
+        top: 50px;
+        right: -100%;
+        height: 0;
+        width: fit-content;
+        opacity: 0;
+        background-color: #FF4365;
+        padding: 100px 0;
+        border-radius: 5px;
+        transition-duration: 1s;
+        transition-property: height;
+        -webkit-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.34);
+        -moz-box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.34);
+        box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.34);
+
+        li{
+            margin: 0;
+        }
+    }
+
+    .clients-active{
+        height: fit-content;
+        opacity: 1;
+        display: block;
+        padding: 10px;
+    }
+
+    
 
     @media @tablet {
         height: @nav-height-desktop;
