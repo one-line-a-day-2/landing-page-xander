@@ -4,7 +4,7 @@ const navLinks = document.querySelector('.nav-links')
 const userCommentsSection = document.querySelector('.user-comments')
 const userCount = document.getElementById('user-count');
 
-const loginText = document.getElementById('login');
+const loginClickables = document.querySelectorAll('.loginButton');
 
 hamburger.addEventListener('click', e => {
     e.currentTarget.classList.toggle('is-active')
@@ -21,11 +21,15 @@ hamburger.addEventListener('click', e => {
 })
 
 
-console.log(loginText)
-if(loginText){
+if(loginClickables){
     const clients = document.querySelector('.client-container');
-    loginText.addEventListener('click', e => {
-        clients.classList.toggle('clients-active')
+    console.log(loginClickables)
+    loginClickables.forEach((clickable) => {
+        clickable.addEventListener('click', e => {
+            console.log(e.target)
+            e.preventDefault()
+            clients.classList.toggle('clients-active')
+        })
     })
 }
 
