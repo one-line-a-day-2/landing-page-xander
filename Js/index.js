@@ -4,6 +4,8 @@ const navLinks = document.querySelector('.nav-links')
 const userCommentsSection = document.querySelector('.user-comments')
 const userCount = document.getElementById('user-count');
 
+const loginText = document.getElementById('login');
+
 hamburger.addEventListener('click', e => {
     e.currentTarget.classList.toggle('is-active')
 
@@ -17,4 +19,13 @@ hamburger.addEventListener('click', e => {
         }
     }
 })
+
+
+console.log(loginText)
+if(loginText){
+    const clients = document.querySelector('.client-container');
+    loginText.addEventListener('click', e => {
+        clients.classList.toggle('clients-active')
+    })
+}
 
