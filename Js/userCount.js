@@ -12,7 +12,7 @@ function countUP(totalCount){
         }else{
             clearInterval(intervalID)
         }
-    }, 100)
+    }, 1)
 }
 
 /**
